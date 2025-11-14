@@ -12,7 +12,7 @@ How it works:
   - Press '3' to run real-time recognition using the trained model.
   - Press '4' to go back to collect mode.
   - Press '5' to speak the current word each time.
-  - Press '6' to clear the current word.
+  - Press '6' to clear the current wo   rd.
   - Press '7' to start quiz mode.
   - Press ESC to quit.
 """
@@ -118,7 +118,6 @@ def load_model():
             return None
     return None
 
-# ---- TTS helpers (gTTS + playsound in background thread) ----
 def _tts_play(text, filename):
     try:
         tts = gTTS(text=text, lang='en', slow=False)
@@ -148,7 +147,6 @@ def speak_feedback_correct():
 def speak_feedback_wrong():
     speak_text_async("Try again", prefix="fb_wrong")
 
-# ---------------- Main ----------------
 def main():
     X, y = load_dataset()
     clf = load_model()
@@ -163,9 +161,8 @@ def main():
     word = ""
     last_letter = None
     start_time = None
-    hold_seconds = 3  # hold duration
+    hold_seconds = 3
 
-    # Quiz variables
     quiz_target = None
     in_quiz = False
     quiz_collecting = False
