@@ -1,6 +1,7 @@
 # A-Z-Sign-Language-Using-Mediapipe-Python-Innovation
 ## The Innovation is Creating Word Using A-Z Sign Language you need to hold your Hand in 3 Seconds to show the Letter Below Left in the Camera
 ## The Other one is Quiz, Camera show the Letter and Answer it Using your Hand 
+## You can create your own dataset just delete the "Features.npy", "Labels.npy", and "Knn_model.joblib"
 Create a Folder                 
 Create a File "Name_Of_Your_File.py"                              
 CTRL + Shift + P                           
